@@ -65,7 +65,7 @@ export default function Navbar() {
         </div>
 
         <div>
-            <Button className="bg-black text-white transition" variant="outline">Sign Up</Button>
+            <Button className="bg-black text-white duration-300" variant="outline">Sign Up</Button>
         </div>
         
         </nav>
