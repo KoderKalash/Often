@@ -64,10 +64,11 @@ const destinations = [
 
 export default function Destination() {
   return (
-    <div className="w-full flex flex-col items-center justify-center gap-12 p-8 bg-gradient-to-b from-gray-50 to-white">
+    <div className="w-full flex flex-col items-center justify-center gap-12 p-8">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         className="text-center max-w-3xl"
       >
@@ -82,7 +83,8 @@ export default function Destination() {
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
         className="w-full flex items-center justify-center"
       >
@@ -98,11 +100,12 @@ export default function Destination() {
               <CarouselItem key={destination.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="p-1"
                 >
-                  <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 shadow-md overflow-hidden">
+                  <Card className="group hover:shadow-lg transition-all duration-500 hover:-translate-y-2 border-0 shadow-md overflow-hidden">
                     <CardContent className="p-0">
                       <div className="relative overflow-hidden">
                         <Image
@@ -157,7 +160,8 @@ export default function Destination() {
 
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.8 }}
         className="text-center"
       >
