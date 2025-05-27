@@ -39,16 +39,12 @@ const socialLinks = [
   { icon: Youtube, href: "#", label: "YouTube" },
 ]
 
-const trustBadges = [
-  { icon: Shield, text: "Secure Booking" },
-  { icon: Award, text: "Award Winning" },
-  { icon: Clock, text: "24/7 Support" },
-  { icon: CreditCard, text: "Safe Payments" },
-]
+
+const date = new Date().getFullYear()
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-black">
+    <footer className="bg-zinc-950 rounded-tl-2xl rounded-tr-2xl">
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
 
@@ -59,7 +55,7 @@ export default function Footer() {
             className="lg:col-span-2"
           >
             <div className="flex items-center gap-2 mb-4">
-             
+
               <span className="text-4xl font-bold text-white ">
                 often
               </span>
@@ -73,19 +69,19 @@ export default function Footer() {
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3 text-white">
                 <MapPin className="w-4 h-4 text-blue-400" />
-                <span className="text-sm">123 Travel Street, Adventure City, AC 12345</span>
+                <span className="text-sm">123 ABC Street, ABC City, AC 12345</span>
               </div>
               <div className="flex items-center gap-3 text-white">
                 <Phone className="w-4 h-4 text-blue-400" />
-                <span className="text-sm">+1 (555) 123-4567</span>
+                <span className="text-sm">+91 12345 67890 </span>
               </div>
               <div className="flex items-center gap-3 text-white">
                 <Mail className="w-4 h-4 text-blue-400" />
-                <span className="text-sm">hello@luxestays.com</span>
+                <span className="text-sm">hello@often.com</span>
               </div>
             </div>
 
-       
+
             <div className="flex gap-3">
               {socialLinks.map((social, index) => (
                 <motion.a
@@ -157,25 +153,6 @@ export default function Footer() {
             </div>
           </div>
         </motion.div>
-
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-8 pt-8 border-t border-gray-800"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {trustBadges.map((badge, index) => (
-              <div key={index} className="flex items-center gap-3 text-white">
-                <div className="bg-gray-800 p-2 rounded-lg">
-                  <badge.icon className="w-5 h-5 text-blue-400" />
-                </div>
-                <span className="text-sm font-medium">{badge.text}</span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
 
       <Separator className="bg-gray-800" />
@@ -189,7 +166,17 @@ export default function Footer() {
       >
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-gray-400 text-sm">
-            © 2025 often. All rights reserved. | Crafted by <span><a href="https://github.com/KoderKalash">Kalash</a></span>
+            &copy; {date} often. All rights reserved. | Crafted by <motion.span
+              animate={{
+                y: [0, -10, 0], 
+                transition: {
+                  duration: 2,      
+                  ease: "easeInOut", 
+                  repeat: Infinity,   
+                  repeatType: "loop", 
+                },
+              }}
+              className="bg-gradient-to-r from-yellow-500 to-orange-600 bg-clip-text text-transparent"><a href="https://github.com/KoderKalash">&lt;Kalash/&gt;</a></motion.span>
           </div>
           <div className="flex gap-6 text-sm">
             <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-200">

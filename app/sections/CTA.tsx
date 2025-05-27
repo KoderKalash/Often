@@ -32,7 +32,7 @@ export default function CTASection() {
   })
 
   return (
-    <div className="w-full relative bg-gray-300 overflow-hidden">
+    <div className="w-full relative ">
    
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full blur-xl" />
@@ -40,7 +40,7 @@ export default function CTASection() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto p-6 md:p-12">
+      <div className="relative max-w-7xl mx-auto p-6 md:p-12 bg-gradient-to-r from-yellow-400 to-orange-400 overflow-hidden rounded-xl shadow-lg mb-2">
        
         <motion.div
           key={currentOffer}
@@ -66,7 +66,7 @@ export default function CTASection() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Your Dream
               <br />
-              <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
                 Adventure
               </span>
               <br />
@@ -89,7 +89,7 @@ export default function CTASection() {
                   className="text-center"
                 >
                   <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30">
-                    <stat.icon className="w-6 h-6 mx-auto mb-2 text-yellow-300" />
+                    <stat.icon className="w-6 h-6 mx-auto mb-2 text-pink-500" />
                     <div className="text-2xl font-bold">{stat.number}</div>
                     <div className="text-sm text-white/80">{stat.label}</div>
                   </div>
@@ -110,7 +110,7 @@ export default function CTASection() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button
                   variant="outline"
-                  className="border-white/30 text-black hover:bg-white/10 px-8 py-4 text-lg font-semibold rounded-full backdrop-blur-sm transition-all duration-300"
+                  className="border-white/30 text-black hover:bg-white/10 px-8 py-4 text-lg font-semibold rounded-full shadow-xl backdrop-blur-sm transition-all duration-300"
                 >
                   <Calendar className="w-5 h-5 mr-2" />
                   Plan Later
