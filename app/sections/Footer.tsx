@@ -11,11 +11,6 @@ import {
   MapPin,
   Phone,
   Mail,
-  Plane,
-  Shield,
-  Award,
-  Clock,
-  CreditCard,
 } from "lucide-react"
 
 const footerLinks = {

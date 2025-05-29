@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight, ChevronDown, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 
 export default function Hero() {
