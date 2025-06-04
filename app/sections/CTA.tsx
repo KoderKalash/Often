@@ -74,7 +74,7 @@ export default function CTASection() {
             </h1>
 
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-              Don't just dream about your perfect getaway. Make it happen today with exclusive deals and personalized
+              Don&apos;t just dream about your perfect getaway. Make it happen today with exclusive deals and personalized
               experiences.
             </p>
 
